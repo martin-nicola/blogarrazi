@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+  <form action="/posts" method="POST">
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="headline">Headline</label>
+        <input type="text" class="form-control" id="headline" placeholder="Type headline here..." name="headline" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="img">Image</label>
+        <input type="text" class="form-control" id="img" placeholder="Insert image link here..." name="img" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="caption">Caption</label>
+        <input type="text" class="form-control" id="caption" placeholder="Type caption here..." name="caption" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="category">Category</label>
+        <input type="text" class="form-control" id="category" placeholder="Type category here..." name="category" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="content">Content</label>
+        <textarea type="text" class="form-control" id="content" name="content" required></textarea>
+      </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+  <div class="posts-container">
+    <% for (let post of posts) { %>
+      <div class="card" style="width: 18rem;">
+        <img src="<%= post.img %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= post.headline %></h5>
+          <p class="card-text"><%= post.content %></p>
+          <a href="/posts/<%= post.id %>" class="btn btn-primary">Click for more</a>
+        </div>
+      </div>
+    <% } %>
+  </div>
+
+<%- include('../partials/footer') %>

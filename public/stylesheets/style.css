@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.jumbotron img {
+  width: 50rem;
+  height: auto;
+}
+
+.btns-edit-delete {
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
