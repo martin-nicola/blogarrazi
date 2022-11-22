@@ -25,10 +25,22 @@ function deletePost(req, res) {
   res.redirect('/posts')
 }
 
+function editPost(req, res) {
+  let post = Post.getOne(req.params.id)
+  res.render('posts/edit', { post })
+}
+
+function updatePost(req, res) {
+  Post.updatePost(req.params.id, req.body)
+  res.redirect(`/posts/${req.params.id}`)
+}
+
 module.exports = {
   index,
   show,
   new: newPost,
   create,
-  delete: deletePost
+  delete: deletePost,
+  edit: editPost,
+  update: updatePost
 }

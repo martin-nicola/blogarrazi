@@ -41,9 +41,18 @@ function deletePost(id) {
   posts = posts.filter(post => post.id !== parseInt(id))
 }
 
+function updatePost(id, body) {
+  let idx = posts.findIndex(post => post.id == parseInt(id))
+  posts[idx].caption = body.caption
+  posts[idx].category = body.category
+  posts[idx].headline = body.headline
+  posts[idx].img = body.img
+}
+
 module.exports = {
   getAll,
   getOne,
   addPost,
-  deletePost
+  deletePost,
+  updatePost
 }
